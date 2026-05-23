@@ -12,4 +12,13 @@ inventario = [
     ["A104", "USB", 20, 15],
     ["A105", "Impresora", 1, 4]
 ]
+# Función para calcular la cantidad a pedir
+def calcular_pedido(stock_actual, stock_minimo):
+
+    if stock_actual < stock_minimo:
+        cantidad = stock_minimo - stock_actual
+    else:
+        cantidad = 0
+
+    return cantidad
 
