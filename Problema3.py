@@ -22,3 +22,20 @@ def calcular_pedido(stock_actual, stock_minimo):
 
     return cantidad
 
+# Mostrar lista de pedidos
+print("LISTA DE PEDIDOS")
+print("---------------------------")
+
+for articulo in inventario:
+
+    codigo = articulo[0]
+    nombre = articulo[1]
+    stock_actual = articulo[2]
+    stock_minimo = articulo[3]
+
+    cantidad_pedir = calcular_pedido(stock_actual, stock_minimo)
+
+    print("Artículo:", nombre)
+    print("Cantidad a pedir:", cantidad_pedir)
+    print("---------------------------")
+    
